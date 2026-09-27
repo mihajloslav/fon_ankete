@@ -1,4 +1,4 @@
-# FON Anketa
+# FON Anketa Automatizacija
 
 Playwright automatizacija za popunjavanje anketa na **E-student-u Fakulteta organizacionih nauka (FON)**.
 
