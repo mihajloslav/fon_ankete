@@ -1,6 +1,6 @@
 # FON Anketa
 
-Playwright automatizacija za popunjavanje anketa na **Studentskim servisima Fakulteta organizacionih nauka (FON)**.
+Playwright automatizacija za popunjavanje anketa na **E-student-u Fakulteta organizacionih nauka (FON)**.
 
 Skripta otvara studentski servis, prijavljuje korisnika, ulazi u sekciju **Анкета**, prolazi kroz dostupne ankete i automatski popunjava njihove listiće.
 
@@ -289,69 +289,6 @@ Ako FON promeni HTML stranice, posebno proveriti selektore za:
 
 ---
 
-## Bezbednost
-
-**Nikada nemoj commitovati stvarnu lozinku u Git repozitorijum.**
-
-Preporučuje se da se lokalni fajl sa kredencijalima ne šalje na GitHub.
-
-Dodaj najmanje:
-
-```gitignore
-.venv/
-__pycache__/
-*.pyc
-anketa_error.png
-```
-
-Ako želiš da projekat bude javno dostupan, još bolje je da kredencijale držiš u environment varijablama umesto direktno u Python fajlu.
-
-Na primer:
-
-```python
-import os
-
-USERNAME = os.environ["FON_USERNAME"]
-PASSWORD = os.environ["FON_PASSWORD"]
-```
-
-Zatim u terminalu:
-
-```bash
-export FON_USERNAME="tvoje_korisnicko_ime"
-export FON_PASSWORD="tvoja_lozinka"
-```
-
----
-
-## GitHub
-
-Pre prvog commit-a proveri da u kodu nema stvarne lozinke:
-
-```bash
-git diff
-```
-
-i:
-
-```bash
-git status
-```
-
-Primer `.gitignore`:
-
-```gitignore
-.venv/
-__pycache__/
-*.pyc
-anketa_error.png
-.env
-```
-
-Ako je lozinka ikada već commitovana na GitHub, samo brisanje iz novog commit-a nije dovoljno — lozinku treba promeniti.
-
----
-
 ## Napomena
 
 Ovaj projekat je automatizacija korisničkog browser procesa. Koristi ga samo sa svojim nalogom i u skladu sa pravilima i uslovima korišćenja studentskog servisa.
@@ -360,6 +297,3 @@ Struktura FON studentskog servisa može se menjati bez najave, pa skripta nije g
 
 ---
 
-## License
-
-Ako želiš da projekat bude javno objavljen, izaberi odgovarajuću licencu za repozitorijum, npr. MIT, GPL-3.0 ili drugu licencu koja odgovara tvojoj nameni.
